@@ -250,7 +250,7 @@ elif page == "Projects":
     st.header("🛠 Projects Showcase")
 
     # Dropdown to select project type (Professional or Personal)
-    proj_type = st.selectbox("# Select Project Type", ["Professional", "Personal"], index=0)
+    proj_type = st.selectbox("# Select Project Type", ["Personal", "Professional"], index=0)
 
     if proj_type == "Professional":
         for proj in professional_projects:
