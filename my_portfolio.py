@@ -83,8 +83,8 @@ experience = [
     }
 ]
 
-# --- Projects ---
-projects = [
+# --- Personal Projects ---
+personal_projects = [
     {
         "name": "🎓 Student Grading System",
         "desc": (
@@ -115,6 +115,18 @@ projects = [
             "- Applied K-Means clustering to group customers\n"
             "- Analyzed behavioral patterns and demographics\n"
             "- Supported targeted marketing and business strategies"
+        )
+    }
+]
+
+# --- Professional Projects ---
+professional_projects = [
+    {
+        "name": "🏞 Personal Photography Portfolio",
+        "desc": (
+            "- Curated a collection of nature and urban photographs\n"
+            "- Used Adobe Lightroom for post-processing\n"
+            "- Hosted online gallery to showcase work"
         )
     }
 ]
@@ -236,9 +248,18 @@ elif page == "Education":
 # --- Projects ---
 elif page == "Projects":
     st.header("🛠 Projects Showcase")
-    for proj in projects:
-        st.markdown(f"#### {proj['name']}")
-        st.success(proj['desc'])
+
+    # Dropdown to select project type (Professional or Personal)
+    proj_type = st.selectbox("# Select Project Type", ["Professional", "Personal"], index=0)
+
+    if proj_type == "Professional":
+        for proj in professional_projects:
+            st.markdown(f"#### {proj['name']}")
+            st.error(proj['desc'])
+    else:
+        for proj in personal_projects:
+            st.markdown(f"#### {proj['name']}")
+            st.success(proj['desc'])
 
 # --- Contact ---
 elif page == "Contact":
