@@ -1,0 +1,18 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# *
+
+# ignore the supabase url and key- sensitive information
+.env
+
+# ignore the virtual environment 
+.venv 
+
+# ignore 
+portfolio.py
+
+# dont ignore
+!my_portfolio.py
+
+
+
+
