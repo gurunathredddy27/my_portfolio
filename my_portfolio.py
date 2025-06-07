@@ -35,12 +35,12 @@ personal_info = {
 # --- Education ---
 education = [
     {
-        # "degree": "B.Tech in Computer Science",
-        # "institution": "👉 College: Visvesvaraya College of Engineering and Technology",
-        # "year": "2018 - 2022",
-        # "details": "- Completed core coursework in Data Structures, Algorithms, and Object-Oriented Programming. \n\n"
-        # "- Gained hands-on experience with Java and Python. \n\n"
-        # "- Worked on mini-projects and final year project focused on practical applications of computer science concepts."
+        "degree": "B.Tech in Computer Science",
+        "institution": "👉 College: Visvesvaraya College of Engineering and Technology",
+        "year": "2018 - 2022",
+        "details": "- Completed core coursework in Data Structures, Algorithms, and Object-Oriented Programming. \n\n"
+        "- Gained hands-on experience with Java and Python. \n\n"
+        "- Worked on mini-projects and final year project focused on practical applications of computer science concepts."
     },
     {
         "degree": "Full Stack Development",
@@ -123,7 +123,7 @@ projects = [
 # st.sidebar.image("https://easydrawingguides.com/wp-content/uploads/2019/01/how-to-draw-thors-hammer-featured-image-1200.png"
 # , width=140)
 
-# st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
+st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
 
 
 
