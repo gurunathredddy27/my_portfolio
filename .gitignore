@@ -7,10 +7,10 @@
 # ignore the virtual environment 
 .venv 
 
-# ignore 
+# ignore this .py file
 portfolio.py
 
-# dont ignore
+# dont ignore this .py file
 !my_portfolio.py
 
 
