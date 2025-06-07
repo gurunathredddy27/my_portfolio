@@ -1,21 +1,21 @@
 import streamlit as st
-import PyPDF2
+# import PyPDF2
 
 # --- Page config ---
 st.set_page_config(page_title="Gurunath | Portfolio", layout="wide")
 
 # --- Helper to Extract PDF Text ---
-@st.cache_data
-def extract_text_from_pdf(pdf_path):
-    text = ""
-    with open(pdf_path, 'rb') as file:
-        reader = PyPDF2.PdfReader(file)
-        for page in reader.pages:
-            text += page.extract_text()
-    return text
+# @st.cache_data
+# def extract_text_from_pdf(pdf_path):
+#     text = ""
+#     with open(pdf_path, 'rb') as file:
+#         reader = PyPDF2.PdfReader(file)
+#         for page in reader.pages:
+#             text += page.extract_text()
+#     return text
 
-resume_path = r"C:\Users\91944\Downloads\resume\Guru2025.pdf"
-resume_text = extract_text_from_pdf(resume_path)
+# resume_path = r"C:\Users\91944\Downloads\resume\Guru2025.pdf"
+# resume_text = extract_text_from_pdf(resume_path)
 
 # --- Personal Info ---
 personal_info = {
