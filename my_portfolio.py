@@ -76,7 +76,7 @@ experience = [
         "description": "Reviewed and evaluated machine-generated content for accuracy and quality."
     },
     {
-        "year": "Sep 2022 - May 2023",
+        "year": "Sep 2021 - May 2023",
         "role": "Technical Assistant",
         "company": "RACEnergy",
         "description": "Handled data entry, troubleshooting, and technical documentation."
@@ -205,7 +205,7 @@ elif page == "Skills":
         st.markdown("- **Git**")
 
         st.markdown("#### 🗄️ Databases")
-        st.markdown("- **MySQL**, **SQL**")
+        st.markdown("""- **MySQL**, **SQL**""")
 
  
 
@@ -216,14 +216,18 @@ elif page == "Skills":
         st.markdown("- **Visual Studio Code**,  **Jupyter**,  **IntelliJ**, **Colab**")
 
         # 🧠 Data Science & AI
+    with col2:
         st.markdown("#### 🧠 Data Science & AI")
-        # st.markdown("#### 📊 Data Science & AI")
-        # st.markdown("- **AI/ML**, **Data Science**")
-        st.markdown("- **Machine Learning**")
-        st.markdown("-  **Deep Learning**")
-        st.markdown("-  **NLP**")
-        st.markdown("-  **Pandas**, **NumPy**")
-        st.markdown("-  **Streamlit**")
+        st.markdown("""
+        - **Machine Learning**  
+        - **Deep Learning**  
+        - **NLP** *(Natural Language Processing)*  
+        - **Transformer**
+        - **LLM** *(Large Language Models)*  
+        - **Pandas**, **NumPy**
+        - **Streamlit**, **Flask**
+        """)
+
 
 # --- Experience ---
 elif page == "Experience":
