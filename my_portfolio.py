@@ -51,16 +51,7 @@ education = [
 ]
 
 # --- Skills ---
-# skills = {
-#     "Python": 90,
-#     "Machine Learning": 85,
-#     "Deep Learning": 70,
-#     "HTML/CSS": 70,
-#     "SQL": 65,
-#     "Streamlit": 80,
-#     "Pandas/Numpy": 85
-# }
-
+ 
 # --- Experience ---
 experience = [
     {
@@ -101,14 +92,7 @@ personal_projects = [
             "- Enabled data-driven pricing recommendations"
         )
     },
-    {
-        "name": "🎬 Movie Recommendation System",
-        "desc": (
-            "- Utilized NLP techniques like CountVectorizer and TF-IDF\n"
-            "- Calculated cosine similarity for personalized recommendations\n"
-            "- Created a scalable model to suggest movies based on user preferences"
-        )
-    },
+    
     {
         "name": "🔍 Customer Segmentation using Machine Learning",
         "desc": (
@@ -121,6 +105,14 @@ personal_projects = [
 
 # --- Professional Projects ---
 professional_projects = [
+    {
+        "name": "🎬 Movie Recommendation System",
+        "desc": (
+            "- Utilized NLP techniques like CountVectorizer and TF-IDF\n"
+            "- Calculated cosine similarity for personalized recommendations\n"
+            "- Created a scalable model to suggest movies based on user preferences"
+        )
+    },
     {
         "name": "🏞 Personal Photography Portfolio",
         "desc": (
@@ -185,47 +177,76 @@ if page == "About Me":
     **💻 GitHub:** [{personal_info['github']}]({personal_info['github']})
     """)
 
-# --- Skills ---
+#skills
 elif page == "Skills":
     st.header("🧠 Skills Overview")
     st.markdown("---")
-    col1, col2 = st.columns(2)
+
+    # --- Technical Skills Rating with Dimmed Colors ---
+    st.subheader("📌 Technical Skills Rating (Out of 10)")
+    tech_skills = {
+        "Python": (9, "#e57373"),           # Soft Red
+        "Machine Learning": (8.5, "#ffb74d"),  # Soft Orange
+        "Deep Learning": (7, "#aed581"),     # Soft Green
+        "Pandas/Numpy": (8.5, "#ce93d8"),    # Soft Purple
+        "Streamlit": (8, "#81d4fa"),         # Soft Blue
+        "SQL": (6.5, "#80deea"),             # Soft Cyan
+        "NLP": (7, "#b39ddb"),               # Soft Violet
+        "LLM / Transformers": (6.5, "#fff176")  # Soft Yellow
+    }
+
+    for skill, (value, color) in tech_skills.items():
+        filled = int((value / 10) * 100)
+        st.markdown(f"""
+            <div style="margin-bottom: 3px;">
+                <strong>{skill}</strong>
+                <div style="background-color: #e0e0e0; border-radius: 5px; height: 15px; width: 100%;">
+                    <div style="width: {filled}%; background-color: {color}; height: 100%; border-radius: 5px;"></div>
+                </div>
+                <small>{value} / 10</small>
+            </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # --- Skills Grid Layout ---
+    st.subheader("📂 Skills Overview")
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown("#### 💻 Programming")
-        st.markdown("- **Java**, **Python**")
+        st.markdown("- Java\n- Python")
 
-        st.markdown("#### 🌐 Web Technologies")
-        st.markdown("- **HTML/CSS**")
-
-        # st.markdown("#### 🖥️ Operating Systems")
-        # st.markdown("- **Windows**")
+        st.markdown("#### 🌐 Web")
+        st.markdown("- HTML/CSS")
 
         st.markdown("#### 🔄 Version Control")
-        st.markdown("- **Git**")
+        st.markdown("- Git")
 
-        st.markdown("#### 🗄️ Databases")
-        st.markdown("""- **MySQL**, **SQL**""")
-
- 
-
-    with col2:
-        # 📊 Visualization Tools & IDEs
-        st.markdown("#### 📊 Visualization Tools & IDEs")
-        st.markdown("- **Power BI**, **Matplotlib**, **Seaborn**")
-        st.markdown("- **Visual Studio Code**,  **Jupyter**,  **IntelliJ**, **Colab**")
-
-        # 🧠 Data Science & AI
     with col2:
         st.markdown("#### 🧠 Data Science & AI")
         st.markdown("""
-        - **Machine Learning**  
-        - **Deep Learning**  
-        - **NLP** *(Natural Language Processing)*  
-        - **Transformer**
-        - **LLM** *(Large Language Models)*  
-        - **Pandas**, **NumPy**
-        - **Streamlit**, **Flask**
+        - Machine Learning  
+        - Deep Learning  
+        - NLP  
+        - Transformers  
+        - LLMs  
+        - Pandas / NumPy  
+        - Streamlit
+        """)
+
+    with col3:
+        st.markdown("#### ⚙️ DevOps & Tools")
+        st.markdown("""
+        - Docker  
+        - Kubernetes  
+        - CI/CD Pipelines  
+        - GitHub Actions  
+        - Render  
+        - Supabase  
+        - MySQL / SQL  
+        - Power BI, Matplotlib, Seaborn  
+        - VS Code, Jupyter, IntelliJ, Colab
         """)
 
 
@@ -250,20 +271,56 @@ elif page == "Education":
         st.markdown("---")
 
 # --- Projects ---
+
+
 elif page == "Projects":
     st.header("🛠 Projects Showcase")
 
-    # Dropdown to select project type (Professional or Personal)
-    proj_type = st.selectbox("# Select Project Type", ["Personal", "Professional"], index=0)
+    # Dropdown to select project type
+    proj_type = st.selectbox("📂 Select Project Type", ["Personal", "Professional"], index=0)
 
-    if proj_type == "Professional":
-        for proj in professional_projects:
-            st.markdown(f"#### {proj['name']}")
-            st.error(proj['desc'])
-    else:
-        for proj in personal_projects:
-            st.markdown(f"#### {proj['name']}")
-            st.success(proj['desc'])
+    # Style for project box
+    box_style = """
+    <div style="
+        border: 1px solid #888888;
+        border-radius: 18px;
+        padding: 15px;
+        margin-bottom: 30px;   /* Increased from 15px to 30px */
+        ">
+        <h4 style="margin-bottom: 8px; color: #f2f2f2;">{name}</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 15px; color: #dddddd;">
+            {desc_items}
+        </ul>
+    </div>
+            """
+
+
+    # Function to convert desc into HTML list
+    def format_description(desc):
+        return ''.join([f"<li>{line.strip('- ')}</li>" for line in desc.split('\n') if line.strip()])
+
+
+    # Render projects
+    projects = personal_projects if proj_type == "Personal" else professional_projects
+
+    for proj in projects:
+        desc_html = format_description(proj["desc"])
+        st.markdown(box_style.format(name=proj["name"], desc_items=desc_html), unsafe_allow_html=True)
+
+# elif page == "Projects":
+#     st.header("🛠 Projects Showcase")
+
+#     # Dropdown to select project type (Professional or Personal)
+#     proj_type = st.selectbox("# Select Project Type", ["Personal", "Professional"], index=0)
+
+#     if proj_type == "Professional":
+#         for proj in professional_projects:
+#             st.markdown(f"#### {proj['name']}")
+#             st.error(proj['desc'])
+#     else:
+#         for proj in personal_projects:
+#             st.markdown(f"#### {proj['name']}")
+#             st.success(proj['desc'])
 
 # --- Contact ---
 elif page == "Contact":
