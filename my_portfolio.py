@@ -4,30 +4,21 @@ import streamlit as st
 # --- Page config ---
 st.set_page_config(page_title="Gurunath | Portfolio", layout="wide")
 
-# --- Helper to Extract PDF Text ---
-# @st.cache_data
-# def extract_text_from_pdf(pdf_path):
-#     text = ""
-#     with open(pdf_path, 'rb') as file:
-#         reader = PyPDF2.PdfReader(file)
-#         for page in reader.pages:
-#             text += page.extract_text()
-#     return text
-
-# resume_path = r"C:\Users\91944\Downloads\resume\Guru2025.pdf"
-# resume_text = extract_text_from_pdf(resume_path)
-
 # --- Personal Info ---
+import streamlit as st
 personal_info = {
     "name": "Gurunath Tokala",
-    "title": "AI/ML Enthusiast & Data Science | Python Developer",
+    "title": "AI/ML Enthusiast | Python Developer",
     "summary": (
-        "Summary:\n"
-        "👉 I love exploring datasets, uncovering hidden insights, and using AI to make smart, data-driven decisions\n\n"
-        "👉 Driven by curiosity and precision, I build intelligent systems using Python, ML, and SQL\n\n"
-        "👉 Skilled in NLP, Neural Networks, and solving real-world problems with data\n\n"
-        "👉 Automating tasks and integrating AI into DevOps pipelines to improve efficiency, reliability, and scalability\n\n"
-        "👉 Documenting project progress and sharing insights to ensure continuous improvement"
+        "### 👋 About Me :)\n"
+        "I’m an enthusiastic and detail-oriented **AI/ML Intern at Lyros**, passionate about transforming data into actionable insights.\n\n"
+        "- 🤖 Hands-on experience in **Machine Learning**, **Deep Learning**, and **Large Language Models (LLMs)**\n"
+        "- 🐍 Proficient in **Python**, **SQL**, and modern AI/ML tools\n"
+        "- 📊 Passionate about exploring datasets and uncovering hidden patterns\n"
+        "- 🧠 Experienced in **Natural Language Processing (NLP)** and **Neural Networks**\n"
+        "- ⚙️ Skilled at automating tasks and integrating AI into **DevOps pipelines** for efficiency and scalability\n"
+        "- 🚀 Driven by curiosity and a commitment to continuous learning\n"
+        "- 📝 Strong at documenting progress and sharing actionable insights"
     ),
     "contact": {
         "email": "gurunathreddy2727@gmail.com",
@@ -35,7 +26,6 @@ personal_info = {
         "github": "https://github.com/gurunathredddy27"
     }
 }
-
 
 # --- Education ---
 education = [
@@ -56,8 +46,6 @@ education = [
     }
 ]
 
-# --- Skills ---
- 
 # --- Experience ---
 experience = [
     {
@@ -100,58 +88,60 @@ experience = [
 
 # --- Personal Projects ---
 personal_projects = [{
-        "name": "🔍 Customer Segmentation using Machine Learning",
-        "desc": (
-            "- Applied K-Means clustering to group customers\n"
-            "- Analyzed behavioral patterns and demographics\n"
-            "- Supported targeted marketing and business strategies"
-        )
-    },
+    "name": "🔍 Customer Segmentation using Machine Learning",
+    "desc": (
+        "- Analyze customer data and group similar customers together based on their behavior and characteristics\n"
+        "- Data cleaning and preprocessing using <span style='color:#ffcc00; font-weight:bold;'>Pandas and NumPy</span>, Feature selection and scaling with Scikit-learn\n"
+        "- I used unsupervised learning, specifically the "
+        "<span style='color:#ffcc00; font-weight:bold;'>K-Means clustering</span> algorithm, to segment the customers."
+    )
+},
     {
         "name": "🎓 Student Grading System",
         "desc": (
-            "- Developed a Tkinter-based GUI to manage student marks\n"
-            "- Implemented role-based access for admins and teachers\n"
-            "- Used Pandas for data handling and predictive grade analysis"
+            "- Developed a <span style='color:#ffcc00; font-weight:bold;'>Python</span> application with a <span style='color:#ffcc00; font-weight:bold;'>Tkinter-based GUI</span> for managing student academic records\n"
+            "- Implemented role-based access control for Admins and Teachers to ensure secure and structured functionality\n"
+            "Enabled adding, removing, and checking student performance"
         )
     },
-    {
-        "name": "🏠 Airbnb Price Prediction",
-        "desc": (
-            "- Built regression models to predict listing prices\n"
-            "- Analyzed key features affecting price fluctuations\n"
-            "- Enabled data-driven pricing recommendations"
-        )
-    },   
+
     {
     "name": "🩺 Diabetes Prediction with Classification Models",
     "desc": (
-        "- Developed classification models (Logistic Regression, Random Forest, SVM, etc.) to predict diabetes likelihood\n"
+        "- Developed <span style='color:#ffcc00; font-weight:bold;'>Classification</span> models (Logistic Regression, Random Forest, SVM) to predict diabetes likelihood\n"
         "- Performed data preprocessing, EDA, and handled class imbalance where necessary\n"
         "- Evaluated models using accuracy, precision, recall, and F1-score to select the best-performing classifier\n"
-        "- Successfully deployed the final model using Flask as a web application"
+        "- Successfully deployed the final model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web application"
     )
-}
+},
+    {
+        "name": "🏠 Airbnb Price Prediction",
+        "desc": (
+            "- Built regression models in Python to accurately predict Airbnb listing prices using structured datasets\n"
+            "- Evaluated multiple machine learning algorithms (e.g., linear regression, <span style='color:#ffcc00; font-weight:bold;'>neural networks</span>, k-nearest neighbors) to optimize predictive accuracy and interpretability.\n"
+            "- Provided actionable, data-driven pricing recommendations to help hosts set competitive rates and maximize occupance"
+        )
+    }
 
-]
+]    #<span style='color:#ffcc00; font-weight:bold;'>Python</span>
 
 # --- Professional Projects ---
 professional_projects = [
     {
         "name": "🎬 Movie Recommendation System",
         "desc": (
-            "- Utilized NLP techniques like CountVectorizer and TF-IDF\n"
-            "- Calculated cosine similarity for personalized recommendations\n"
-            "- Created a scalable model to suggest movies based on user preferences"
+            "- I developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>Natural Language Processingon</span> (NLP).The idea was to recommend movies based on textual similarity of movie descriptions or plots rather than just ratings or genres.\n"
+            "- I used <span style='color:#ffcc00; font-weight:bold;'>TF-IDF Vectorization</span> to convert the text data (movie overviews) into numerical vectors that represent the importance of words in each plot.\n"
+            "- Then I calculated cosine similarity between those vectors to measure how similar two movie descriptions are."
         )
     },
     {
     "name": "🏡 House Price Prediction with Regression Models",
     "desc": (
-        "- Built multiple regression models (Linear, SVR, Randomforest, etc.) for predicting house prices\n"
-        "- Evaluated models using R² score and selected the best-performing algorithm\n"
+        "- Built multiple regression models (<span style='color:#ffcc00; font-weight:bold;'>Linear, SVR, Randomforest</span>) for predicting house prices\n"
+        "- Evaluated models using <span style='color:#ffcc00; font-weight:bold;'>R² score</span> and selected the best-performing algorithm\n"
         "- Performed EDA and feature engineering for better prediction accuracy\n"
-        "- Successfully deployed the model using Flask as a web app"
+        "- Successfully deployed the model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web app"
     )
 }
 
@@ -163,9 +153,6 @@ professional_projects = [
 # , width=140)
 
 st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
-
-
-
 
 
 # --- Sidebar Navigation Buttons ---
@@ -204,19 +191,8 @@ page = st.session_state.page
 if page == "About Me":
     st.title(f"👋 Hi, I'm {personal_info['name']}")
     st.markdown(f"### {personal_info['title']}")
-    # st.success(personal_info['summary'])
-    st.markdown(f"""
-        <div style="
-            border: 1px solid #444444;
-            padding: 16px;
-            border-radius: 10px;
-            font-size: 15.5px;
-            line-height: 1.7;
-            color: #dddddd;
-        ">
-        {personal_info['summary'].replace('\n', '<br>')}
-        </div>
-        """, unsafe_allow_html=True)
+    st.markdown(personal_info["summary"])
+
 
     st.markdown("---")
     # st.write("Contact:")
@@ -225,11 +201,17 @@ if page == "About Me":
         **🔗 LinkedIn:** [{personal_info['contact']['linkedin']}]({personal_info['contact']['linkedin']})  
         **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
         """)
+    # Download Resume
+    with open("GurunAth2025.pdf", "rb") as file:
+        btn = st.download_button(
+            label="📄 Download Resume",
+            data=file,
+            file_name="Gurunath_Resume.pdf",
+            mime="application/pdf"
+    )
     
 
- 
 #skills ------------
-
 elif page == "Skills":
     st.header("🧠 Skills Overview")
     st.markdown("---")
