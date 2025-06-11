@@ -22,15 +22,20 @@ personal_info = {
     "name": "Gurunath Tokala",
     "title": "AI/ML Enthusiast & Data Science | Python Developer",
     "summary": (
-        "Summary:\n\n"
-        "👉 Driven by curiosity and precision, I build intelligent systems using Python, ML, and SQL. \n\n"
+        "Summary:\n"
         "👉 I love exploring datasets, uncovering hidden insights, and using AI to make smart, data-driven decisions\n\n"
-        "👉 Skilled in NLP, Neural Networks, and solving real-world problems with data.\n\n"
+        "👉 Driven by curiosity and precision, I build intelligent systems using Python, ML, and SQL\n\n"
+        "👉 Skilled in NLP, Neural Networks, and solving real-world problems with data\n\n"
+        "👉 Automating tasks and integrating AI into DevOps pipelines to improve efficiency, reliability, and scalability\n\n"
+        "👉 Documenting project progress and sharing insights to ensure continuous improvement"
     ),
-    "email": "gurunathreddy2727@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/gurunath-tokala/",
-    "github": "https://github.com/gurunathredddy27"
+    "contact": {
+        "email": "gurunathreddy2727@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/gurunath-tokala/",
+        "github": "https://github.com/gurunathredddy27"
+    }
 }
+
 
 # --- Education ---
 education = [
@@ -38,15 +43,16 @@ education = [
         "degree": "B.Tech in Computer Science",
         "institution": "👉 College: Visvesvaraya College of Engineering and Technology",
         "year": "2018 - 2022",
-        "details": "- Completed core coursework in Data Structures, Algorithms, and Object-Oriented Programming. \n\n"
-        "- Gained hands-on experience with Java and Python. \n\n"
-        "- Worked on mini-projects and final year project focused on practical applications of computer science concepts."
+        "details": "- Completed core coursework in Data Structures, Algorithms, DBMS, OS, CN and Object-Oriented Programming. \n\n"
+        "- Gained hands-on experience with Java and Python for software development and problem solving \n\n"
+        "- Final year project focused on developing a real-world software solution using ML concepts\n\n "
+        "- Additionally, I actively participated in sports, given presentations on emerging technologies, and co-ordinated several events, which helped enhance my leadership and collaboration skills."
     },
     {
         "degree": "Full Stack Development",
         "institution": "👉 Institution: BridgeLab",
         "year": "2023",
-        "details": "- Basic and Advance Object-Oriented Programming with Java.\n\n - Web Applications with HTML, CSS, JS."
+        "details": "- Mastered Basic and Advanced Object-Oriented Programming (OOP) concepts using Java.\n\n - Built responsive web applications using HTML, CSS, and JavaScript.\n\n - Gained hands-on experience with version control (Git & GitHub)\n\n - Learned basic database operations using SQL for full-stack integration"
     }
 ]
 
@@ -55,27 +61,52 @@ education = [
 # --- Experience ---
 experience = [
     {
-        "year": "Feb 2025 - Present",
-        "role": "Software Engineer",
-        "company": "Lyrostech",
-        "description": "Handled data analysis, developed ML models, and executed end-to-end projects."
-    },
+    "year": "Feb 2025 - Present",
+    "role": "Software Engineer",
+    "company": "Lyrostech",
+    "description": (
+        "- Handled data analysis, developed ML models, and executed end-to-end projects\n"
+        "- Built and deployed regression and classification models using Scikit-learn\n"
+        "- Designed and trained deep learning models and neural networks using TensorFlow/Keras\n"
+        "- Applied NLP techniques including text classification and sentiment analysis\n"
+        "- Experimented with transformer-based models (BERT, LLMs) for advanced language tasks\n"
+        "- Integrated machine learning pipelines with Streamlit and Flask for real-time user interaction\n"
+    )
+}
+,
     {
         "year": "Feb 2024 - Nov 2024",
         "role": "Freelance Content Reviewer",
         "company": "Centific",
-        "description": "Reviewed and evaluated machine-generated content for accuracy and quality."
+        "description": (
+            "- Evaluated AI-generated responses for factual accuracy and clarity\n"
+            "- Assessed language fluency, tone, and coherence of machine outputs\n"
+            "- Ensured alignment with brand guidelines and ethical standards\n"
+            "- Provided detailed feedback to improve AI language models"
+        )
     },
-    {
+     {
         "year": "Sep 2021 - May 2023",
         "role": "Technical Assistant",
         "company": "RACEnergy",
-        "description": "Handled data entry, troubleshooting, and technical documentation."
+        "description": (
+            "- Maintained technical documentation and prepared standard operating procedures (SOPs)\n"
+            "- Assisted in troubleshooting and repairing EV infrastructure equipment\n"
+            "- Maintained equipment logs and collaborated with engineering teams\n"
+            "- Coordinated with engineering teams for hardware testing and diagnostics"
+        )
     }
 ]
 
 # --- Personal Projects ---
-personal_projects = [
+personal_projects = [{
+        "name": "🔍 Customer Segmentation using Machine Learning",
+        "desc": (
+            "- Applied K-Means clustering to group customers\n"
+            "- Analyzed behavioral patterns and demographics\n"
+            "- Supported targeted marketing and business strategies"
+        )
+    },
     {
         "name": "🎓 Student Grading System",
         "desc": (
@@ -91,16 +122,17 @@ personal_projects = [
             "- Analyzed key features affecting price fluctuations\n"
             "- Enabled data-driven pricing recommendations"
         )
-    },
-    
+    },   
     {
-        "name": "🔍 Customer Segmentation using Machine Learning",
-        "desc": (
-            "- Applied K-Means clustering to group customers\n"
-            "- Analyzed behavioral patterns and demographics\n"
-            "- Supported targeted marketing and business strategies"
-        )
-    }
+    "name": "🩺 Diabetes Prediction with Classification Models",
+    "desc": (
+        "- Developed classification models (Logistic Regression, Random Forest, SVM, etc.) to predict diabetes likelihood\n"
+        "- Performed data preprocessing, EDA, and handled class imbalance where necessary\n"
+        "- Evaluated models using accuracy, precision, recall, and F1-score to select the best-performing classifier\n"
+        "- Successfully deployed the final model using Flask as a web application"
+    )
+}
+
 ]
 
 # --- Professional Projects ---
@@ -114,13 +146,16 @@ professional_projects = [
         )
     },
     {
-        "name": "🏞 Personal Photography Portfolio",
-        "desc": (
-            "- Curated a collection of nature and urban photographs\n"
-            "- Used Adobe Lightroom for post-processing\n"
-            "- Hosted online gallery to showcase work"
-        )
-    }
+    "name": "🏡 House Price Prediction with Regression Models",
+    "desc": (
+        "- Built multiple regression models (Linear, SVR, Randomforest, etc.) for predicting house prices\n"
+        "- Evaluated models using R² score and selected the best-performing algorithm\n"
+        "- Performed EDA and feature engineering for better prediction accuracy\n"
+        "- Successfully deployed the model using Flask as a web app"
+    )
+}
+
+    
 ]
 
 # --- Sidebar Branding ---
@@ -158,7 +193,7 @@ st.sidebar.markdown("""
 if 'page' not in st.session_state:
     st.session_state.page = "About Me"
 
-pages = ["About Me", "Skills", "Experience", "Education", "Projects", "Contact"]
+pages = ["About Me", "Education","Skills", "Experience", "Projects", "Contact"]
 for p in pages:
     if st.sidebar.button(p):
         st.session_state.page = p
@@ -169,17 +204,88 @@ page = st.session_state.page
 if page == "About Me":
     st.title(f"👋 Hi, I'm {personal_info['name']}")
     st.markdown(f"### {personal_info['title']}")
-    st.info(personal_info['summary'])
-
+    # st.success(personal_info['summary'])
     st.markdown(f"""
-    **📧 Email:** [{personal_info['email']}](mailto:{personal_info['email']})  
-    **🔗 LinkedIn:** [{personal_info['linkedin']}]({personal_info['linkedin']})  
-    **💻 GitHub:** [{personal_info['github']}]({personal_info['github']})
-    """)
+        <div style="
+            border: 1px solid #444444;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 15.5px;
+            line-height: 1.7;
+            color: #dddddd;
+        ">
+        {personal_info['summary'].replace('\n', '<br>')}
+        </div>
+        """, unsafe_allow_html=True)
 
-#skills
+    st.markdown("---")
+    # st.write("Contact:")
+    st.markdown(f"""
+        **📧 Email:** [{personal_info['contact']['email']}](mailto:{personal_info['contact']['email']})  
+        **🔗 LinkedIn:** [{personal_info['contact']['linkedin']}]({personal_info['contact']['linkedin']})  
+        **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
+        """)
+    
+
+ 
+#skills ------------
+
 elif page == "Skills":
     st.header("🧠 Skills Overview")
+    st.markdown("---")
+ # --- Categorized Grid Layout ---
+    st.subheader("📂 Skills Breakdown")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("#### 💻 Programming Languages")
+        st.markdown("- Java\n- Python\n- SQL")
+
+        st.markdown("#### 📊 Data Science & AI")
+        st.markdown("""
+        - Machine Learning  
+        - Deep Learning  
+        - NLP  
+        - Transformers  
+        - LLMs  
+        - Pandas / NumPy  
+        """)
+
+    with col2:
+        st.markdown("#### 🧰 Frameworks & Libraries")
+        st.markdown("""
+        - Scikit-Learn
+        - TensorFlow  
+        - Keras  
+        - Streamlit  
+        - Flask  
+        """)
+
+        st.markdown("#### 🧠 Visualization Tools")
+        st.markdown("""
+        - Power BI  
+        - Matplotlib  
+        - Seaborn  
+        """)
+
+    with col3:
+        st.markdown("#### ⚙️ IDEs & Development Tools")
+        st.markdown("""
+        - VS Code  
+        - Jupyter  
+        - Colab  
+        - IntelliJ  
+        """)
+
+        st.markdown("#### 🚀 Deployment & DevOps")
+        st.markdown("""
+        - Docker  
+        - Kubernetes  
+        - CI/CD Pipelines  
+        - GitHub Actions  
+        - Render  
+        - Supabase  
+        """)
     st.markdown("---")
 
     # --- Technical Skills Rating with Dimmed Colors ---
@@ -209,45 +315,6 @@ elif page == "Skills":
 
     st.markdown("---")
 
-    # --- Skills Grid Layout ---
-    st.subheader("📂 Skills Overview")
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.markdown("#### 💻 Programming")
-        st.markdown("- Java\n- Python")
-
-        st.markdown("#### 🌐 Web")
-        st.markdown("- HTML/CSS")
-
-        st.markdown("#### 🔄 Version Control")
-        st.markdown("- Git")
-
-    with col2:
-        st.markdown("#### 🧠 Data Science & AI")
-        st.markdown("""
-        - Machine Learning  
-        - Deep Learning  
-        - NLP  
-        - Transformers  
-        - LLMs  
-        - Pandas / NumPy  
-        - Streamlit
-        """)
-
-    with col3:
-        st.markdown("#### ⚙️ DevOps & Tools")
-        st.markdown("""
-        - Docker  
-        - Kubernetes  
-        - CI/CD Pipelines  
-        - GitHub Actions  
-        - Render  
-        - Supabase  
-        - MySQL / SQL  
-        - Power BI, Matplotlib, Seaborn  
-        - VS Code, Jupyter, IntelliJ, Colab
-        """)
 
 
 # --- Experience ---
@@ -267,12 +334,11 @@ elif page == "Education":
         st.subheader(f"{edu['institution']}")
         st.markdown(f"{edu['degree']}")
         st.markdown(f"**📅 {edu['year']}**")
-        st.info(edu['details'])
+        st.success(edu['details'])
         st.markdown("---")
 
+
 # --- Projects ---
-
-
 elif page == "Projects":
     st.header("🛠 Projects Showcase")
 
@@ -307,20 +373,7 @@ elif page == "Projects":
         desc_html = format_description(proj["desc"])
         st.markdown(box_style.format(name=proj["name"], desc_items=desc_html), unsafe_allow_html=True)
 
-# elif page == "Projects":
-#     st.header("🛠 Projects Showcase")
-
-#     # Dropdown to select project type (Professional or Personal)
-#     proj_type = st.selectbox("# Select Project Type", ["Personal", "Professional"], index=0)
-
-#     if proj_type == "Professional":
-#         for proj in professional_projects:
-#             st.markdown(f"#### {proj['name']}")
-#             st.error(proj['desc'])
-#     else:
-#         for proj in personal_projects:
-#             st.markdown(f"#### {proj['name']}")
-#             st.success(proj['desc'])
+ 
 
 # --- Contact ---
 elif page == "Contact":
