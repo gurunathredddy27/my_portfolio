@@ -132,7 +132,7 @@ professional_projects = [
         "desc": (
             "- I developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>Natural Language Processingon</span> (NLP).The idea was to recommend movies based on textual similarity of movie descriptions or plots rather than just ratings or genres.\n"
             "- I used <span style='color:#ffcc00; font-weight:bold;'>TF-IDF Vectorization</span> to convert the text data (movie overviews) into numerical vectors that represent the importance of words in each plot.\n"
-            "- Then I calculated cosine similarity between those vectors to measure how similar two movie descriptions are."
+            "- Then I calculated <span style='color:#ffcc00; font-weight:bold;'>cosine similarity</span> between those vectors to measure how similar two movie descriptions are."
         )
     },
     {
@@ -153,6 +153,17 @@ professional_projects = [
 # , width=140)
 
 st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
+
+# st.sidebar.markdown(
+#     """
+#     <div style="margin-left: 20px;">
+#         <img src="https://blog.accredian.com/wp-content/uploads/2019/04/Python-logo.jpg" width="140" style="border-radius: 15px;">
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+
 
 
 # --- Sidebar Navigation Buttons ---
@@ -202,7 +213,7 @@ if page == "About Me":
         **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
         """)
     # Download Resume
-    with open("GurunAth2025.pdf", "rb") as file:
+    with open("Gurunath_resume.pdf", "rb") as file:
         btn = st.download_button(
             label="📄 Download Resume",
             data=file,
