@@ -39,8 +39,8 @@ education = [
         "- Additionally, I actively participated in sports, given presentations on emerging technologies, and co-ordinated several events, which helped enhance my leadership and collaboration skills."
     },
     {
-        "degree": "Full Stack Development",
-        "institution": "👉 Institution: BridgeLab",
+        "degree": "Certification in Full Stack Development",
+        "institution": "👉 Institution: BridgeLabz",
         "year": "2023",
         "details": "- Mastered Basic and Advanced Object-Oriented Programming (OOP) concepts using Java.\n\n - Built responsive web applications using HTML, CSS, and JavaScript.\n\n - Gained hands-on experience with version control (Git & GitHub)\n\n - Learned basic database operations using SQL for full-stack integration"
     }
@@ -152,16 +152,16 @@ professional_projects = [
 # st.sidebar.image("https://easydrawingguides.com/wp-content/uploads/2019/01/how-to-draw-thors-hammer-featured-image-1200.png"
 # , width=140)
 
-st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
+# st.sidebar.image("https://www.vectorkhazana.com/assets/images/products/Pokemon_Pikachu_Logo.png", width=140)
 
-# st.sidebar.markdown(
-#     """
-#     <div style="margin-left: 20px;">
-#         <img src="https://blog.accredian.com/wp-content/uploads/2019/04/Python-logo.jpg" width="140" style="border-radius: 15px;">
-#     </div>
-#     """,
-#     unsafe_allow_html=True
-# )
+st.sidebar.markdown(
+    """
+    <div style="margin-left: 20px;">
+        <img src="https://blog.accredian.com/wp-content/uploads/2019/04/Python-logo.jpg" width="140" style="border-radius: 15px;">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
@@ -213,7 +213,7 @@ if page == "About Me":
         **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
         """)
     # Download Resume
-    with open("Gurunath_resume.pdf", "rb") as file:
+    with open("gurunathreddy_resume.pdf", "rb") as file:
         btn = st.download_button(
             label="📄 Download Resume",
             data=file,
@@ -266,7 +266,7 @@ elif page == "Skills":
         st.markdown("""
         - VS Code  
         - Jupyter  
-        - Colab  
+        - Collab  
         - IntelliJ  
         """)
 
