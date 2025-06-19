@@ -52,13 +52,14 @@ experience = [
     "year": "Feb 2025 - Present",
     "role": "Software Engineer",
     "company": "Lyrostech",
-    "description": (
+    "description":("- Participating in a structured training program focused on Artificial Intelligence  and Machine Learning\n"
         "- Handled data analysis, developed ML models, and executed end-to-end projects\n"
         "- Built and deployed regression and classification models using Scikit-learn\n"
-        "- Designed and trained deep learning models and neural networks using TensorFlow/Keras\n"
+        "- Designed and trained deep learning models and neural networks using TensorFlow and Keras for advanced machine learning tasks.\n"
         "- Applied NLP techniques including text classification and sentiment analysis\n"
-        "- Experimented with transformer-based models (BERT, LLMs) for advanced language tasks\n"
-        "- Integrated machine learning pipelines with Streamlit and Flask for real-time user interaction\n"
+        "- Experimented with transformer-based models (BERT, Llama) for advanced language tasks\n"
+        "- Deployed and managed Python applications using Render for hosting and Supabase as a backend service, enabling efficient integration and scalable deployment workflows \n"
+        "- Gained hands-on experience with CI/CD pipelines and Docker to automate, containerize, and streamline model deployment processes\n"
     )
 }
 ,
@@ -67,10 +68,10 @@ experience = [
         "role": "Freelance Content Reviewer",
         "company": "Centific",
         "description": (
-            "- Evaluated AI-generated responses for factual accuracy and clarity\n"
-            "- Assessed language fluency, tone, and coherence of machine outputs\n"
-            "- Ensured alignment with brand guidelines and ethical standards\n"
-            "- Provided detailed feedback to improve AI language models"
+            "- Reviewed and evaluated AI-generated content to ensure accuracy, clarity, and adherence to company guidelines and quality standards\n"
+            "- Identified and corrected errors in grammar, punctuation, and factual information, maintaining high standards for published material\n"
+            "- Identified potentially harmful words, toxic phrases, or biased content to promote safe and ethical AI communication.\n"
+            "- Provided detailed feedback to help improve the performance and accuracy of AI language models."
         )
     },
      {
@@ -78,10 +79,10 @@ experience = [
         "role": "Technical Assistant",
         "company": "RACEnergy",
         "description": (
-            "- Maintained technical documentation and prepared standard operating procedures (SOPs)\n"
-            "- Assisted in troubleshooting and repairing EV infrastructure equipment\n"
-            "- Maintained equipment logs and collaborated with engineering teams\n"
-            "- Coordinated with engineering teams for hardware testing and diagnostics"
+            "- Provided technical support for EV systems, assisting in troubleshooting, diagnostics, and routine maintenance to ensure optimal vehicle and battery performance.\n"
+            "- Maintained accurate records of technical procedures, service reports, and compliance documentation to support smooth workflow and regulatory standards.\n"
+            "- Supported training sessions for new staff and interns, demonstrating proper handling of tools, safety protocols, and standard operating procedures.\n"
+            "- Collaborated with engineering teams to resolve the issues found in the kit and contributing to continuous improvement of electric vehicle technology."
         )
     }
 ]
