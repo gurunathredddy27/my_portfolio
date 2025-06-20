@@ -113,7 +113,9 @@ personal_projects = [{
         "- Performed data preprocessing, EDA, and handled class imbalance where necessary\n"
         "- Evaluated models using accuracy, precision, recall, and F1-score to select the best-performing classifier\n"
         "- Successfully deployed the final model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web application"
-    )
+    ),
+      "deploy_url": "https://5bb427bc-e791-4850-8e01-c1361c50e805-00-3hturv31lrr3v.sisko.replit.dev/",
+        "github_url": "https://github.com/gurunathredddy27/Diabetes_prediction"
 },
     {
         "name": "🏠 Airbnb Price Prediction",
@@ -143,10 +145,11 @@ professional_projects = [
         "- Evaluated models using <span style='color:#ffcc00; font-weight:bold;'>R² score</span> and selected the best-performing algorithm\n"
         "- Performed EDA and feature engineering for better prediction accuracy\n"
         "- Successfully deployed the model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web app"
-    )
+    ),
+      "deploy_url": "https://8a261c09-faab-487d-8991-a641fc4be4b5-00-27x62krqk4v97.pike.replit.dev/",
+        "github_url": "https://github.com/gurunathredddy27/House_price_prediction"
 }
 
-    
 ]
 
 # --- Sidebar Branding ---
@@ -337,7 +340,10 @@ elif page == "Projects":
     st.header("🛠 Projects Showcase")
 
     # Dropdown to select project type
-    proj_type = st.selectbox("📂 Select Project Type", ["Personal", "Professional"], index=0)
+    proj_type = st.selectbox("Select Project Type", ["Personal", "Professional"], index=0)
+
+    # Decide project list based on type
+    projects = personal_projects if proj_type == "Personal" else professional_projects
 
     # Style for project box
     box_style = """
@@ -345,27 +351,50 @@ elif page == "Projects":
         border: 1px solid #888888;
         border-radius: 18px;
         padding: 15px;
-        margin-bottom: 30px;   /* Increased from 15px to 30px */
+        margin-bottom: 30px;
         ">
         <h4 style="margin-bottom: 8px; color: #f2f2f2;">{name}</h4>
         <ul style="margin: 0; padding-left: 20px; font-size: 15px; color: #dddddd;">
             {desc_items}
         </ul>
     </div>
-            """
-
+    """
 
     # Function to convert desc into HTML list
     def format_description(desc):
         return ''.join([f"<li>{line.strip('- ')}</li>" for line in desc.split('\n') if line.strip()])
 
+    # Render projects
+    for proj in projects:
+        desc_html = format_description(proj["desc"])
+
+        # Optional links
+        deploy_link = f"<a href='{proj.get('deploy_url')}' target='_blank' style='color:#66ccff;'>🌐 Live Demo</a>" if proj.get("deploy_url") else ""
+        github_link = f"<a href='{proj.get('github_url')}' target='_blank' style='color:#66ccff;'>📁 GitHub</a>" if proj.get("github_url") else ""
+
+        links_html = ""
+        if deploy_link or github_link:
+            links_html = f"<div style='margin-top:10px;'>{deploy_link}{' | ' if deploy_link and github_link else ''}{github_link}</div>"
+
+        # Inject links into HTML block
+        st.markdown(
+            box_style.format(
+                name=proj["name"],
+                desc_items=desc_html + links_html
+            ),
+            unsafe_allow_html=True
+        )
+
+
+
 
     # Render projects
     projects = personal_projects if proj_type == "Personal" else professional_projects
 
-    for proj in projects:
-        desc_html = format_description(proj["desc"])
-        st.markdown(box_style.format(name=proj["name"], desc_items=desc_html), unsafe_allow_html=True)
+    # for proj in projects:
+    #     desc_html = format_description(proj["desc"])
+    #     st.markdown(box_style.format(name=proj["name"], desc_items=desc_html), unsafe_allow_html=True)
+
 
  
 
