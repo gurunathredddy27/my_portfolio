@@ -114,7 +114,7 @@ personal_projects = [{
         "- Evaluated models using accuracy, precision, recall, and F1-score to select the best-performing classifier\n"
         "- Successfully deployed the final model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web application"
     ),
-      "deploy_url": "https://5bb427bc-e791-4850-8e01-c1361c50e805-00-3hturv31lrr3v.sisko.replit.dev/",
+      "deploy_url": "https://diabetes-prediction-5jmj.onrender.com/",
         "github_url": "https://github.com/gurunathredddy27/Diabetes_prediction"
 },
     {
@@ -147,7 +147,7 @@ professional_projects = [
         "- Performed EDA and feature engineering for better prediction accuracy\n"
         "- Successfully deployed the model using <span style='color:#ffcc00; font-weight:bold;'>Flask</span> as a web app"
     ),
-      "deploy_url": "https://8a261c09-faab-487d-8991-a641fc4be4b5-00-27x62krqk4v97.pike.replit.dev/",
+      "deploy_url": "https://house-price-prediction-x8e0.onrender.com/",
         "github_url": "https://github.com/gurunathredddy27/House_price_prediction"
 }
 
