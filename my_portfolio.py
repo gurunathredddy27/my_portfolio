@@ -136,7 +136,8 @@ professional_projects = [
             "- I developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>Natural Language Processingon</span> (NLP).The idea was to recommend movies based on textual similarity of movie descriptions or plots rather than just ratings or genres.\n"
             "- I used <span style='color:#ffcc00; font-weight:bold;'>TF-IDF Vectorization</span> to convert the text data (movie overviews) into numerical vectors that represent the importance of words in each plot.\n"
             "- Then I calculated <span style='color:#ffcc00; font-weight:bold;'>cosine similarity</span> between those vectors to measure how similar two movie descriptions are."
-        )
+        ),
+        "github_url": "https://github.com/gurunathredddy27/movie_recommendatino_system"
     },
     {
     "name": "🏡 House Price Prediction with Regression Models",
@@ -410,7 +411,7 @@ elif page == "Contact":
     </form>
     """
     st.markdown(contact_form, unsafe_allow_html=True)
-    st.markdown("💡 Tip: Replace your email with the one you want to receive messages on.")
+    # st.markdown("💡 Tip: Replace your email with the one you want to receive messages on.")
 
 # --- Footer ---
 st.markdown("---")
