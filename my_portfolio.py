@@ -37,7 +37,7 @@ education = [
         "- Gained hands-on experience with Java and Python for software development and problem solving \n\n"
         "- Final year project focused on developing a real-world software solution using ML concepts\n\n "
         "- Additionally, I actively participated in sports, given presentations on emerging technologies, and co-ordinated several events, which helped enhance my leadership and collaboration skills."
-    },
+    }, 
     {
         "degree": "Certification in Full Stack Development",
         "institution": "👉 Institution: BridgeLabz",
@@ -245,7 +245,8 @@ elif page == "Skills":
         - Deep Learning  
         - NLP  
         - Transformers  
-        - LLMs  
+        - LLMs 
+        - Computer Vision 
         - Pandas / NumPy  
         """)
 
@@ -259,7 +260,7 @@ elif page == "Skills":
         - Flask  
         """)
 
-        st.markdown("#### 🧠 Visualization Tools")
+        st.markdown("#### 🦄 Visualization Tools")
         st.markdown("""
         - Power BI  
         - Matplotlib  
@@ -329,11 +330,29 @@ elif page == "Experience":
 elif page == "Education":
     st.header("🎓 Education")
     for edu in education:
+        st.markdown("---")
         st.subheader(f"{edu['institution']}")
         st.markdown(f"{edu['degree']}")
         st.markdown(f"**📅 {edu['year']}**")
         st.success(edu['details'])
-        st.markdown("---")
+
+    st.subheader("📄 Certificate from BridgeLabz")
+
+    # Initialize session state
+    if 'show_certificate' not in st.session_state:
+        st.session_state['show_certificate'] = False
+
+    # Button to show certificate
+    if st.button("🎓 View Certificate"):
+        st.session_state['show_certificate'] = True
+
+    # Show certificate image if toggled
+    if st.session_state['show_certificate']:
+        st.image("Bridgelabz_cerft.png", caption="Full Stack Java Development - BridgeLabz", width=650)
+        
+        # Simulate closing the modal
+        if st.button("❌Double click: Close Certificate"):
+            st.session_state['show_certificate'] = False
 
 
 # --- Projects ---
