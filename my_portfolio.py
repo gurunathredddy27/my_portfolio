@@ -10,7 +10,7 @@ personal_info = {
     "name": "Gurunath Tokala",
     "title": "AI/ML Enthusiast | Python Developer",
     "summary": (
-        "### 👋 About Me :)\n"
+        "### 💻 About Me :)\n"
         "I’m an enthusiastic and detail-oriented **AI/ML Intern at Lyros**, passionate about transforming data into actionable insights.\n\n"
         "- 🤖 Hands-on experience in **Machine Learning**, **Deep Learning**, and **Large Language Models (LLMs)**\n"
         "- 🐍 Proficient in **Python**, **SQL**, and modern AI/ML tools\n"
@@ -103,7 +103,8 @@ personal_projects = [{
             "- Developed a <span style='color:#ffcc00; font-weight:bold;'>Python</span> application with a <span style='color:#ffcc00; font-weight:bold;'>Tkinter-based GUI</span> for managing student academic records\n"
             "- Implemented role-based access control for Admins and Teachers to ensure secure and structured functionality\n"
             "Enabled adding, removing, and checking student performance"
-        )
+        ),
+        "github_url": "https://github.com/gurunathredddy27/StudentGradingSystem.git"
     },
 
     {
@@ -218,7 +219,7 @@ if page == "About Me":
         **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
         """)
     # Download Resume
-    with open("gurunathreddy_resume@25.pdf", "rb") as file:
+    with open("guru_resume25.pdf", "rb") as file:
         btn = st.download_button(
             label="📄 Download Resume",
             data=file,
