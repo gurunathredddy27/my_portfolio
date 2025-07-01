@@ -219,7 +219,7 @@ if page == "About Me":
         **💻 GitHub:** [{personal_info['contact']['github']}]({personal_info['contact']['github']})
         """)
     # Download Resume
-    with open("guru_resume25.pdf", "rb") as file:
+    with open("Gurunath_resume25.pdf", "rb") as file:
         btn = st.download_button(
             label="📄 Download Resume",
             data=file,
