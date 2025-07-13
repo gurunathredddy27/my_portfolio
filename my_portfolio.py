@@ -117,7 +117,15 @@ personal_projects = [{
     ),
       "deploy_url": "https://diabetes-prediction-5jmj.onrender.com/",
         "github_url": "https://github.com/gurunathredddy27/Diabetes_prediction"
-},
+}, {
+        "name": "🎬 Movie Recommendation System",
+        "desc": (
+            "- I developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>Natural Language Processingon</span> (NLP).The idea was to recommend movies based on textual similarity of movie descriptions or plots rather than just ratings or genres.\n"
+            "- I used <span style='color:#ffcc00; font-weight:bold;'>TF-IDF Vectorization</span> to convert the text data (movie overviews) into numerical vectors that represent the importance of words in each plot.\n"
+            "- Then I calculated <span style='color:#ffcc00; font-weight:bold;'>cosine similarity</span> between those vectors to measure how similar two movie descriptions are."
+        ),
+        "github_url": "https://github.com/gurunathredddy27/movie_recommendatino_system"
+    },
     {
         "name": "🏠 Airbnb Price Prediction",
         "desc": (
@@ -134,11 +142,11 @@ professional_projects = [
     {
         "name": "🎬 Movie Recommendation System",
         "desc": (
-            "- I developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>Natural Language Processingon</span> (NLP).The idea was to recommend movies based on textual similarity of movie descriptions or plots rather than just ratings or genres.\n"
-            "- I used <span style='color:#ffcc00; font-weight:bold;'>TF-IDF Vectorization</span> to convert the text data (movie overviews) into numerical vectors that represent the importance of words in each plot.\n"
-            "- Then I calculated <span style='color:#ffcc00; font-weight:bold;'>cosine similarity</span> between those vectors to measure how similar two movie descriptions are."
+            "- Developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>FastAPI</span> for backend APIs and <span style='color:#ffcc00; font-weight:bold;'>Streamlit</span> for frontend visualization, enabling both collaborative and content-based filtering.\n"
+            "- Built and serialized machine learning models <span style='color:#ffcc00; font-weight:bold;'>(KNN, cosine similarity)</span> using scikit-learn, pandas, and numpy for personalized movie recommendations.\n"
+            "- Containerized the application using <span style='color:#ffcc00; font-weight:bold;'>Docker</span> Implemented GitHub Actions <span style='color:#ffcc00; font-weight:bold;'>CI/CD pipeline</span> to automate building, testing, and pushing Docker images to Docker Hub on every commit."
         ),
-        "github_url": "https://github.com/gurunathredddy27/movie_recommendatino_system"
+        "github_url": "https://github.com/gurunathredddy27/movie-recommendation-FastAPI"
     },
     {
     "name": "🏡 House Price Prediction with Regression Models",
@@ -168,9 +176,6 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-
 
 # --- Sidebar Navigation Buttons ---
 st.sidebar.title("📌 Navigation")
@@ -361,7 +366,7 @@ elif page == "Projects":
     st.header("🛠 Projects Showcase")
 
     # Dropdown to select project type
-    proj_type = st.selectbox("Select Project Type", ["Personal", "Professional"], index=0)
+    proj_type = st.selectbox("Select Project Type👇", ["Personal", "Professional"], index=0)
 
     # Decide project list based on type
     projects = personal_projects if proj_type == "Personal" else professional_projects
