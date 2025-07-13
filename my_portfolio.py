@@ -262,8 +262,9 @@ elif page == "Skills":
         - Scikit-Learn
         - TensorFlow  
         - Keras  
-        - Streamlit  
-        - Flask  
+        - Streamlit 
+        - Flask
+        - FastAPI 
         """)
 
         st.markdown("#### 🦄 Visualization Tools")
@@ -364,9 +365,10 @@ elif page == "Education":
 # --- Projects ---
 elif page == "Projects":
     st.header("🛠 Projects Showcase")
+    # st.info("ℹ️ Use the dropdown below to switch between Personal and Professional projects.")
 
     # Dropdown to select project type
-    proj_type = st.selectbox("Select Project Type👇", ["Personal", "Professional"], index=0)
+    proj_type = st.selectbox("👇 Use the dropdown below to switch between Personal and Professional projects.", ["Personal", "Professional"], index=0)
 
     # Decide project list based on type
     projects = personal_projects if proj_type == "Personal" else professional_projects
