@@ -140,7 +140,7 @@ personal_projects = [{
 # --- Professional Projects ---
 professional_projects = [
     {
-        "name": "🎬 Movie Recommendation System",
+        "name": "🎬 Movie Recommendation System Using FastAPI",
         "desc": (
             "- Developed a Movie Recommendation System using <span style='color:#ffcc00; font-weight:bold;'>FastAPI</span> for backend APIs and <span style='color:#ffcc00; font-weight:bold;'>Streamlit</span> for frontend visualization, enabling both collaborative and content-based filtering.\n"
             "- Built and serialized machine learning models <span style='color:#ffcc00; font-weight:bold;'>(KNN, cosine similarity)</span> using scikit-learn, pandas, and numpy for personalized movie recommendations.\n"
@@ -275,12 +275,12 @@ elif page == "Skills":
         """)
 
     with col3:
-        st.markdown("#### ⚙️ IDEs & Development Tools")
+        st.markdown("#### ⚙️ Big Data Tools  ")
         st.markdown("""
-        - VS Code  
-        - Jupyter  
-        - Collab  
-        - IntelliJ  
+        - Apache Spark  
+        - PySpark
+        - DataBricks 
+        - Azure cloud
         """)
 
         st.markdown("#### 🚀 Deployment & DevOps")
