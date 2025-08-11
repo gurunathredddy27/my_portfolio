@@ -288,7 +288,8 @@ elif page == "Skills":
         - Docker  
         - Kubernetes  
         - CI/CD Pipelines  
-        - GitHub Actions  
+        - GitHub Actions
+        - n8n   
         - Render  
         - Supabase  
         """)
