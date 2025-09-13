@@ -234,66 +234,141 @@ if page == "About Me":
     
 
 #skills ------------
+# --- Skills ---
 elif page == "Skills":
-    st.header("🧠 Skills Overview")
-    st.markdown("---")
- # --- Categorized Grid Layout ---
-    st.subheader("📂 Skills Breakdown")
-    col1, col2, col3 = st.columns(3)
+    st.header("💡 Skills Showcase")
 
-    with col1:
-        st.markdown("#### 💻 Programming Languages")
-        st.markdown("- Java\n- Python\n- SQL")
+    # Organize skills by categories with logos
+    skills = {
+        "Programming": [
+            {"name": "Python", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"},
+            {"name": "Java", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"},
+            {"name": "SQL", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"},
+        ],
+        "Machine Learning / AI": [
+            {"name": "TensorFlow", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"},
+            {"name": "PyTorch", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"},
+            {"name": "Scikit-learn", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/375px-Scikit_learn_logo_small.svg.png"},
+            {"name": "Deep Learning", "logo": "https://cdn-icons-png.flaticon.com/512/4712/4712100.png"},
+            {"name": "NLP", "logo": "https://cdn-icons-png.flaticon.com/512/1087/1087927.png"},
+            {"name": "Transformers", "logo": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"},
+            {"name": "LLMs", "logo": "https://cdn-icons-png.flaticon.com/512/4712/4712035.png"},
+            {"name": "Computer Vision", "logo": "https://cdn-icons-png.flaticon.com/512/1048/1048927.png"},
+            {"name": "Pandas", "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"},
+            {"name": "NumPy", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"},
+        ],        
+        "Web / Deployment": [
+            {"name": "Flask", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"},
+            {"name": "FastAPI", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"},
+            {"name": "Streamlit", "logo": "https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png"},
+        ],
+        "Data Visualization": [
+                {
+                    "name": "Power BI",
+                    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1024px-New_Power_BI_Logo.svg.png"
+                },
+                {
+                    "name": "Matplotlib",
+                    "logo": "https://raw.githubusercontent.com/valohai/ml-logos/master/matplotlib.svg"
+                },
+                {
+                    "name": "Seaborn",
+                    "logo": "https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
+                }
+            ],
 
-        st.markdown("#### 📊 Data Science & AI")
-        st.markdown("""
-        - Machine Learning  
-        - Deep Learning  
-        - NLP  
-        - Transformers  
-        - LLMs 
-        - Computer Vision 
-        - Pandas / NumPy  
-        """)
+        "Big Data Tools": [ 
+            {"name": "Apache Spark", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"}, {"name": "PySpark", "logo": "https://spark.apache.org/images/spark-logo-rev.svg"}, 
+            {"name": "Databricks", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Databricks_logo.svg/420px-Databricks_logo.svg.png"}, 
+            {"name": "Azure", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"}, 
+        ],
+        "Cloud / DevOps": [
+            {"name": "Docker", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"},
+            {"name": "Kubernetes", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"},
+            {"name": "CI/CD Pipelines", "logo": "https://cdn-icons-png.flaticon.com/512/2593/2593549.png"},
+            {"name": "GitHub Actions", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"},
+            {"name": "n8n", "logo": "https://n8n.io/favicon-32x32.png"},
+            {"name": "Render", "logo": "https://avatars.githubusercontent.com/u/37417956?s=200&v=4"},
+            {"name": "Supabase", "logo": "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"}
+        ],
 
-    with col2:
-        st.markdown("#### 🧰 Frameworks & Libraries")
-        st.markdown("""
-        - Scikit-Learn
-        - TensorFlow  
-        - Keras  
-        - Streamlit 
-        - Flask
-        - FastAPI 
-        """)
+        
+    }
 
-        st.markdown("#### 🦄 Visualization Tools")
-        st.markdown("""
-        - Power BI  
-        - Matplotlib  
-        - Seaborn  
-        """)
+    # Display each category in horizontal rows
+    for category, tools in skills.items():
+        st.subheader(f"🔹 {category}")
+        cols = st.columns(len(tools))
+        for col, tool in zip(cols, tools):
+            col.markdown(
+                f"<div style='text-align: center;'>"
+                f"<img src='{tool['logo']}' width='60'><br>"
+                f"<small style='color:#cccccc;'>{tool['name']}</small>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        st.markdown("---")
 
-    with col3:
-        st.markdown("#### ⚙️ Big Data Tools  ")
-        st.markdown("""
-        - Apache Spark  
-        - PySpark
-        - DataBricks 
-        - Azure cloud
-        """)
+# elif page == "Skills":
+#     st.header("🧠 Skills Overview")
+#     st.markdown("---")
+#  # --- Categorized Grid Layout ---
+#     st.subheader("📂 Skills Breakdown")
+#     col1, col2, col3 = st.columns(3)
 
-        st.markdown("#### 🚀 Deployment & DevOps")
-        st.markdown("""
-        - Docker  
-        - Kubernetes  
-        - CI/CD Pipelines  
-        - GitHub Actions
-        - n8n   
-        - Render  
-        - Supabase  
-        """)
-    st.markdown("---")
+#     with col1:
+#         st.markdown("#### 💻 Programming Languages")
+#         st.markdown("- Java\n- Python\n- SQL")
+
+#         st.markdown("#### 📊 Data Science & AI")
+#         st.markdown("""
+#         - Machine Learning  
+#         - Deep Learning  
+#         - NLP  
+#         - Transformers  
+#         - LLMs 
+#         - Computer Vision 
+#         - Pandas / NumPy  
+#         """)
+
+#     with col2:
+#         st.markdown("#### 🧰 Frameworks & Libraries")
+#         st.markdown("""
+#         - Scikit-Learn
+#         - TensorFlow  
+#         - Keras  
+#         - Streamlit 
+#         - Flask
+#         - FastAPI 
+#         """)
+
+#         st.markdown("#### 🦄 Visualization Tools")
+#         st.markdown("""
+#         - Power BI  
+#         - Matplotlib  
+#         - Seaborn  
+#         """)
+
+#     with col3:
+#         st.markdown("#### ⚙️ Big Data Tools  ")
+#         st.markdown("""
+#         - Apache Spark  
+#         - PySpark
+#         - DataBricks 
+#         - Azure cloud
+#         """)
+
+#         st.markdown("#### 🚀 Deployment & DevOps")
+#         st.markdown("""
+#         - Docker  
+#         - Kubernetes  
+#         - CI/CD Pipelines  
+#         - GitHub Actions
+#         - n8n   
+#         - Render  
+#         - Supabase  
+#         """)
+#     st.markdown("---")
 
     # --- Technical Skills Rating with Dimmed Colors ---
     st.subheader("📌 Technical Skills Rating (Out of 10)")
