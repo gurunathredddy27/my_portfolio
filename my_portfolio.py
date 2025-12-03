@@ -64,6 +64,18 @@ experience = [
 }
 ,
     {
+        "year": "Aug 2025 - Oct 2025",
+        "role": "Data Science Intern",
+        "company": "Developers Arena",
+        "description": (
+            "- Worked on classification and regression models\n"
+            "- Implemented NLP pipelines\n"
+            "- Explored Transformers & LLMs\n"
+            "- Performed data preprocessing & evaluation"
+        )
+    },
+
+  {
         "year": "Feb 2024 - Nov 2024",
         "role": "Freelance Content Reviewer",
         "company": "Centific",
@@ -276,12 +288,28 @@ elif page == "Skills":
                     "logo": "https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
                 }
             ],
-
-        "Big Data Tools": [ 
-            {"name": "Apache Spark", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"}, {"name": "PySpark", "logo": "https://spark.apache.org/images/spark-logo-rev.svg"}, 
-            {"name": "Databricks", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Databricks_logo.svg/420px-Databricks_logo.svg.png"}, 
-            {"name": "Azure", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"}, 
-        ],
+            "Big Data Tools": [ 
+                {
+                    "name": "Apache Spark",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                },
+                {
+                    "name": "PySpark",
+                    "logo": "https://spark.apache.org/images/spark-logo-rev.svg"
+                },
+                {
+                    "name": "Databricks",
+                    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Databricks_logo.svg/420px-Databricks_logo.svg.png"
+                },
+                {
+                    "name": "Azure",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                },
+                {
+                    "name": "Snowflake",
+                    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg"
+                }
+            ],
         "Cloud / DevOps": [
             {"name": "Docker", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"},
             {"name": "Kubernetes", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"},
